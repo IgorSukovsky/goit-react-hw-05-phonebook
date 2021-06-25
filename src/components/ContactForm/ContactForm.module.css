@@ -1,0 +1,28 @@
+.form {
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  padding: 20px;
+  width: 200px;
+  border: 2px solid rgba(65, 105, 225, 0.274);
+  border-radius: 50px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: rgba(26, 80, 116, 0.151);
+}
+
+.title {
+  font-weight: 600;
+  color: aliceblue;
+}
+
+.btn {
+  width: 100px;
+  margin: 15px auto;
+  background-color: rgb(166, 195, 238);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(42, 84, 148);
+}

@@ -1,0 +1,19 @@
+.title {
+  display: flex;
+  margin-left: 37px;
+  color: aliceblue;
+}
+
+.titleContact {
+  display: flex;
+  margin-left: 71px;
+  color: aliceblue;
+}
+
+.block {
+  border: 2px solid rgba(65, 105, 225, 0.274);
+  width: 220px;
+  padding: 10px;
+  background-color: rgba(26, 80, 116, 0.151);
+  border-radius: 50px;
+}
