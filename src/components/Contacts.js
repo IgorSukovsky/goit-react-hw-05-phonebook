@@ -17,15 +17,6 @@ class Contacts extends Component {
     items: [],
     filter: "",
   };
-  handleDelete = (id) => {
-    this.setState((prevState) => ({
-      items: prevState.items.filter((item) => item.id !== id),
-    }));
-  };
-
-  handleChange = (evt) => {
-    this.setState({ [evt.target.name]: evt.target.value });
-  };
 
   handleSubmit = (term) => {
     if (!term) {
@@ -47,35 +38,9 @@ class Contacts extends Component {
       number: term.number,
     };
     this.props.addNewToList(newTodo);
-    // this.setState((prevState) => {
-    //   const newItems = [newTodo, ...prevState.items];
-    //   return { items: newItems };
-    // });
   };
 
-  // =========================
-  componentDidMount() {
-    console.log("[componentDidMount]");
-    const items = localStorage.getItem("items");
-    if (items) {
-      const parsedItems = JSON.parse(items);
-      this.setState({ items: parsedItems });
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log("[componentDidUpdate]");
-    if (prevState.items !== this.state.items) {
-      localStorage.setItem("items", JSON.stringify(this.state.items));
-    }
-  }
-
   render() {
-    // const { filter } = this.state;
-    // const formattedFilter = filter.toLowerCase().trim();
-    // const filteredItems = items.filter((item) =>
-    //   item.name.toLowerCase().includes(formattedFilter)
-    // );
     const { items, filter } = this.props;
 
     return (
